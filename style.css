@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    margin: 0;
+    background-image: linear-gradient(to right,#1e2853, #482558);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 50px;
+}
+.bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image:url(background.jpg) ;
+   
+    background-size: cover;
+    border-radius: 5px;
+    transition: 1s;
+
+
+
+}
+.bg2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image:url(bg2.jpg) ;
+   
+    background-size: cover;
+    border-radius: 5px;
+    transition: 1s;
+
+
+
+}
+
+.box:hover .bg{
+    transform:perspective(20px)  rotateX(2deg)  translateY(-50px);
+}
+
+.box:hover .bg2{
+    transform:perspective(20px)  rotateX(2deg)  translateY(-50px);
+}
+
+
+
+.bird{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-size: 100%;
+    animation: anime 0.1s linear infinite;
+    background-repeat: no-repeat;
+    bottom: 0;
+    transition: 1s;
+    animation-play-state: paused!important;
+}
+.bird2{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-size: 100%;
+    animation: anime2 0.1s linear infinite;
+    background-repeat: no-repeat;
+    bottom: 0;
+    transition: 1s;
+    animation-play-state: paused!important;
+}
+.box:hover .bird{
+    animation-play-state: running!important;
+    transform: translateX(-50px) translateY(-200px) ;
+
+}
+.box:hover .bird2{
+    animation-play-state: running!important;
+    transform: translateX(-50px) translateY(-200px) ;
+
+}
+
+@keyframes anime {
+    from{
+        background-image: url(bird1.png);
+    }
+    to{
+        background-image: url(bird2.png);
+    }
+    
+}
+
+@keyframes anime2 {
+    from{
+        background-image: url(bird3.png);
+    }
+    to{
+        background-image: url(bird4.png);
+    }
+    
+}
+
